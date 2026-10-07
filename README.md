@@ -276,7 +276,7 @@ TrafficAgent/
 ├── libs/ktem/ktem/           # 应用层（领域 prompt / 结构化日志）
 ├── scripts/                  # ingest / query_cli / smoke / bench / test_* / start.ps1
 ├── tests/test_api.py         # 接口测试
-├── docs/                     # 各 Phase 报告（00~06）+ RESUME/DEMO
+├── docs/                     # 技术报告（环境/领域/检索/工程化/LangGraph）+ 截图
 │   └── screenshots/          # 界面展示截图
 ├── flowsettings.py           # 配置开关（缓存/混合检索/重排/领域prompt）
 ├── requirements.txt          # 改造新增依赖（torch / sentence-transformers / diskcache / langgraph / mcp）
