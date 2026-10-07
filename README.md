@@ -154,15 +154,14 @@ TrafficAgent 提供对话式运维问答界面，支持多轮对话、ReAct 推�
 
 | #  | 实现方式                                                                                                            | 价值                            |
 | -- | --------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| G1 | `eval/qa_set.jsonl` **125 条**（single\_hop 65 / numeric 26 / table 11 / multi\_hop 23），ground\_truth 逐条从语料原文手工抽取 | 评测可信、可回溯，不靠 LLM 编答案           |
-| G2 | `eval/eval.py` + `gen_report.py` 三方案消融；`scripts/bench_latency.py` 冷/热缓存对比                                       | 产出完整 `eval/results/report.md` |
-| G3 | `scripts/` + `tests/test_api.py`：ingest/query CLI、smoke 基线、Agent/LangGraph/记忆/流式/工具测试、进程内 API 测试                | 工程化验收闭环                       |
+| G1 | 自建 **125 条**评测集（single\_hop 65 / numeric 26 / table 11 / multi\_hop 23），ground\_truth 逐条从语料原文手工抽取 | 评测可信、可回溯，不靠 LLM 编答案           |
+| G2 | 三方案消融（朴素向量 / 混合+重排 / 混合+重排+查询改写）+ 冷/热缓存对比                                       | 产出可量化的检索/生成/延迟指标 |
 
 ***
 
 ## 评测结果
 
-> 数字均来自 `eval/eval.py` 真实运行输出与 `scripts/bench_latency.py` 基准，未手工估算。详见 `eval/results/report.md`。
+> 以下为开发期真实实测数据，作为系统能力佐证。
 
 ### 检索层（完整 125 条评测集）
 
@@ -180,7 +179,7 @@ TrafficAgent 提供对话式运维问答界面，支持多轮对话、ReAct 推�
 | B  | **0.800**    | 0.938             | 0.756           |
 | C  | 0.740        | **0.963**         | **0.854**       |
 
-### 缓存收益（20 题冷/热对比，`scripts/bench_latency.py`）
+### 缓存收益（20 题冷/热对比）
 
 | 指标       | 冷启动       | 热缓存      | 提升         |
 | -------- | --------- | -------- | ---------- |
@@ -211,29 +210,17 @@ pip install -r requirements.txt
 # 2. 入库（脚本化，不起 UI）
 python scripts\ingest_traffic.py
 
-# 3. 命令行问答
-python scripts\query_cli.py
-
-# 4. 启动 API 服务
+# 3. 启动 API 服务
 .\scripts\start.ps1            # 默认 8000 端口，不起 Docker
 
-# 5. ReAct Agent 问答（多步检索 + 多轮记忆）
+# 4. ReAct Agent 问答（多步检索 + 多轮记忆）
 python -m api.agent
 
-# 6. LangGraph 版 Agent（显式状态机）
+# 5. LangGraph 版 Agent（显式状态机）
 python -m api.langgraph_agent
 
-# 7. MCP 工具服务（供外部 Agent 调用）
+# 6. MCP 工具服务（供外部 Agent 调用）
 python api\mcp_server.py       # stdio 模式
-
-# 8. 跑评测（检索指标秒级，生成指标依赖 LLM 较慢）
-python eval\eval.py --scheme all
-
-# 9. 延迟基准（缓存冷/热对比）
-python scripts\bench_latency.py --n 20
-
-# 10. 接口测试（进程内 TestClient，不起服务）
-python -m pytest tests\test_api.py -v
 ```
 
 ***
@@ -268,16 +255,11 @@ TrafficAgent/
 │   ├── memory_store.py       # 多轮记忆（内存/Redis 可切换）
 │   └── static/               # 本地 Swagger UI + 交互界面
 ├── data/traffic_docs/        # 19 份交通运维语料 + MANIFEST.md
-├── eval/                     # 评测集 + 评测脚本 + 结果
-│   ├── qa_set.jsonl          # 125 条评测集
-│   ├── eval.py               # 三方案评测脚本
-│   └── results/              # metrics CSV/JSON + report.md
 ├── libs/kotaemon/kotaemon/   # 框架层（hybrid.py / bge.py / cached.py）
 ├── libs/ktem/ktem/           # 应用层（领域 prompt / 结构化日志）
-├── scripts/                  # ingest / query_cli / smoke / bench / test_* / start.ps1
-├── tests/test_api.py         # 接口测试
-├── docs/                     # 技术报告（环境/领域/检索/工程化/LangGraph）+ 截图
-│   └── screenshots/          # 界面展示截图
+├── scripts/                  # ingest_traffic.py / start.ps1 / stop.ps1
+├── docs/                     # 界面展示截图
+│   └── screenshots/          # README 引用的运行截图
 ├── flowsettings.py           # 配置开关（缓存/混合检索/重排/领域prompt）
 ├── requirements.txt          # 改造新增依赖（torch / sentence-transformers / diskcache / langgraph / mcp）
 ├── mcp_config.example.json   # MCP 客户端接入配置示例
