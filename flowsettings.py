@@ -281,14 +281,6 @@ KH_LLMS["mistral"] = {
 }
 
 # default reranking models
-KH_RERANKINGS["cohere"] = {
-    "spec": {
-        "__type__": "kotaemon.rerankings.CohereReranking",
-        "model_name": "rerank-v4.0-fast",
-        "cohere_api_key": config("COHERE_API_KEY", default=""),
-    },
-    "default": False,
-}
 
 # 本地 bge-reranker（无需 API key）。默认关闭，启用后作为检索链路的默认重排器。
 # 需本地安装 sentence-transformers + torch，并联网下载 BAAI/bge-reranker-base

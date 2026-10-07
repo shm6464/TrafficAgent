@@ -52,18 +52,10 @@ class RerankingManager:
                     self._default = item.name
 
     def load_vendors(self):
-        from kotaemon.rerankings import (
-            BgeReranking,
-            CohereReranking,
-            TeiFastReranking,
-            VoyageAIReranking,
-        )
+        from kotaemon.rerankings import BgeReranking
 
         self._vendors = [
             BgeReranking,
-            TeiFastReranking,
-            CohereReranking,
-            VoyageAIReranking,
         ]
 
     def __getitem__(self, key: str) -> BaseReranking:
