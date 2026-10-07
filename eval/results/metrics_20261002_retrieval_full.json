@@ -1,0 +1,55 @@
+{
+  "date": "20261002",
+  "n_questions": 125,
+  "judge_note": "自实现 LLM-as-judge（ragas 未安装/降级）",
+  "schemes": [
+    {
+      "scheme": "A",
+      "n": 125,
+      "recall@5": 0.984,
+      "mrr@5": 0.8929,
+      "avg_retrieval_ms": 23.23,
+      "avg_gen_ms": 0.0,
+      "total_latency_ms": 23.23,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_cost_rmb": 0.0,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "scheme": "B",
+      "n": 125,
+      "recall@5": 1.0,
+      "mrr@5": 0.926,
+      "avg_retrieval_ms": 35.26,
+      "avg_gen_ms": 0.0,
+      "total_latency_ms": 35.26,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_cost_rmb": 0.0,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    },
+    {
+      "scheme": "C",
+      "n": 125,
+      "recall@5": 1.0,
+      "mrr@5": 0.9547,
+      "avg_retrieval_ms": 3769.32,
+      "avg_gen_ms": 0.0,
+      "total_latency_ms": 3769.32,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_cost_rmb": 0.0,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    }
+  ]
+}

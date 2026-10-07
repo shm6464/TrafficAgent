@@ -1,0 +1,4 @@
+﻿id,difficulty,question,rag_faithfulness,rag_answer_relevancy,agent_faithfulness,agent_answer_relevancy,rag_ms,agent_ms
+q017,hard,通信系统维修分级与周期和信号系统相比有何异同？,0.6,0.9,0.6,0.5,38730.11,36579.72
+q027,hard,ATP、ATO、ATS 三者的层次关系是什么？,0.4,0.2,0.5,1.0,36503.36,41117.12
+q033,hard,架修 A 与架修 B 的作业内容有何区别？,0.1,1.0,0.8,1.0,11713.71,32350.08

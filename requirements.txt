@@ -1,0 +1,28 @@
+# TrafficAgent 运行依赖补充
+# 项目主体依赖通过 pyproject.toml + uv.lock 管理（uv sync 或 pip install -e .）。
+# 本文件列出改造阶段新增、且未在 workspace pyproject.toml 中声明的依赖，
+# 以及需要显式锁定版本的包。安装顺序：先 pip install -e . 再 pip install -r requirements.txt。
+
+# ---- 重排（bge-reranker-base，本地 sentence-transformers 加载）----
+torch==2.14.1
+sentence-transformers==6.1.0
+
+# ---- 本地向量化（FastEmbed，默认 Embedding 后端）----
+fastembed
+
+# ---- 双层磁盘缓存（CachedEmbeddings + CachedLLM）----
+diskcache
+
+# ---- LangGraph 状态机 Agent（api/langgraph_agent.py）----
+# 锁定 0.2.76：与现有 langchain-core 0.2.x 兼容；0.3+/1.x 需 langchain-core 0.3+
+langgraph==0.2.76
+
+# ---- MCP 工具服务（api/mcp_server.py）----
+mcp[cli]>=1.0.0
+
+# ---- API 服务运行 ----
+uvicorn
+
+# ---- 接口测试（tests/test_api.py）----
+httpx
+pytest

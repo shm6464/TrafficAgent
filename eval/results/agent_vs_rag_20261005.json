@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "n": 3,
+    "rag_faithfulness": 0.3667,
+    "agent_faithfulness": 0.6333,
+    "rag_answer_relevancy": 0.7,
+    "agent_answer_relevancy": 0.8333,
+    "faithfulness_gain": 0.2666,
+    "relevancy_gain": 0.1333
+  },
+  "rows": [
+    {
+      "id": "q017",
+      "difficulty": "hard",
+      "question": "通信系统维修分级与周期和信号系统相比有何异同？",
+      "rag_faithfulness": 0.6,
+      "rag_answer_relevancy": 0.9,
+      "agent_faithfulness": 0.6,
+      "agent_answer_relevancy": 0.5,
+      "rag_ms": 38730.11,
+      "agent_ms": 36579.72
+    },
+    {
+      "id": "q027",
+      "difficulty": "hard",
+      "question": "ATP、ATO、ATS 三者的层次关系是什么？",
+      "rag_faithfulness": 0.4,
+      "rag_answer_relevancy": 0.2,
+      "agent_faithfulness": 0.5,
+      "agent_answer_relevancy": 1.0,
+      "rag_ms": 36503.36,
+      "agent_ms": 41117.12
+    },
+    {
+      "id": "q033",
+      "difficulty": "hard",
+      "question": "架修 A 与架修 B 的作业内容有何区别？",
+      "rag_faithfulness": 0.1,
+      "rag_answer_relevancy": 1.0,
+      "agent_faithfulness": 0.8,
+      "agent_answer_relevancy": 1.0,
+      "rag_ms": 11713.71,
+      "agent_ms": 32350.08
+    }
+  ]
+}

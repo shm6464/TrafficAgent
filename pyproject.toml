@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools >= 61.0", "wheel", "setuptools-git-versioning>=2.0,<3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = false
+packages.find.include = []
+
+[tool.setuptools-git-versioning]
+enabled = true
+dev_template = "{tag}"
+dirty_template = "{tag}"
+tag_filter = "v?\\d+(\\.\\d+)*.*"
+
+[project]
+name = "traffic-agent"
+dynamic = ["version"]
+requires-python = ">= 3.10"
+description = "TrafficAgent: Urban Rail Transit O&M Knowledge Base QA System"
+dependencies = [
+    "kotaemon",
+    "ktem"
+]
+authors = [
+    { name = "shm6464" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: Apache Software License",
+]
+
+[tool.uv.sources]
+kotaemon = { workspace = true }
+ktem = { workspace = true }
+
+# uv workspace configuration
+[tool.uv.workspace]
+members = ["libs/kotaemon", "libs/ktem"]
+
+[dependency-groups]
+dev = [
+    "black",
+    "coverage",
+    "flake8",
+    "ipython",
+    "pre-commit",
+    "pytest",
+    "pytest-mock",
+    "sphinx"
+]
+
+[project.urls]
+Homepage = "https://github.com/shm6464/TrafficAgent"
+Repository = "https://github.com/shm6464/TrafficAgent"
+Documentation = "https://github.com/shm6464/TrafficAgent"
+
+[tool.codespell]
+skip = "*.js,*.css,*.map"
+# `llm` abbreviation for large language models
+ignore-words-list = "llm,fo"
+quiet-level = 3
+check-filenames = ""
+
+[tool.isort]
+known_first_party = ["kotaemon"]

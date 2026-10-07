@@ -1,0 +1,32 @@
+# 交通运维知识库问答系统 - 编排配置（Phase 4 部署配置，仅配置不构建）
+#
+# 说明：只定义 API 服务 + 持久化卷，不在本机构建/运行容器（依据 INSTRUCTIONS.md）。
+# 使用方式见 README「部署」一节：
+#   docker compose up -d --build
+#   Invoke-RestMethod -Uri http://localhost:8000/healthz
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: traffic-ops-api
+    ports:
+      - "8000:8000"
+    environment:
+      # 模型端点与缓存开关（Key 从宿主机 .env 注入，勿硬编码在 compose 里）
+      - USE_CACHE=${USE_CACHE:-true}
+      - USE_LLM_CACHE=${USE_LLM_CACHE:-true}
+      - USE_EMBEDDING_CACHE=${USE_EMBEDDING_CACHE:-true}
+      - LLM_CACHE_TTL=${LLM_CACHE_TTL:-3600}
+      - USE_HYBRID_RETRIEVAL=${USE_HYBRID_RETRIEVAL:-true}
+      - USE_RERANKING=${USE_RERANKING:-true}
+      - USE_TRAFFIC_PROMPT=${USE_TRAFFIC_PROMPT:-true}
+    env_file:
+      - .env
+    volumes:
+      # 应用数据（索引 / 向量库 / 模型缓存）持久化到宿主机，避免重建镜像丢数据
+      - ./ktem_app_data:/app/ktem_app_data
+      # 结构化日志目录
+      - ./logs:/app/logs
+    restart: unless-stopped

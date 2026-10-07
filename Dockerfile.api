@@ -1,0 +1,38 @@
+# 交通运维知识库问答系统 - API 专用镜像（Phase 4 部署配置，仅配置不构建）
+
+# 说明：
+#   本 Dockerfile 只服务 FastAPI（api/main.py），不启动 Gradio Web UI。
+#   依据 INSTRUCTIONS.md 硬约束：本机构建/运行容器由我自行决定，此处仅提供
+#   完整可用的镜像定义。构建命令见 README「部署」一节。
+
+FROM python:3.11-slim
+
+# 系统依赖（poppler 用于 PDF 解析，git/curl 用于部分 reader）
+RUN apt-get update -qqy && \
+    apt-get install -y --no-install-recommends \
+        git curl gcc g++ poppler-utils libpoppler-dev unzip && \
+    apt-get autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONIOENCODING=UTF-8
+
+WORKDIR /app
+
+# 安装 uv 并用 uv.lock 同步依赖（与项目一致的依赖管理）
+RUN pip install --no-cache-dir "uv"
+COPY . /app
+
+# 同步依赖（含 kotaemon + ktem 的 libs，由 uv.lock 锁定）
+RUN uv sync --frozen --no-cache || uv sync --no-cache
+
+# 补齐 API 所需但可能在 uv.lock 之外的可选依赖（diskcache 缓存）
+RUN uv pip install --python .venv diskcache
+
+# 持久化卷：模型缓存 + 应用数据（索引/向量库）
+VOLUME ["/app/ktem_app_data"]
+
+EXPOSE 8000
+
+# 启动 API 服务（uvicorn 单进程，禁止多 worker 以免重复加载模型）
+CMD ["/app/.venv/bin/uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]

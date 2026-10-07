@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "traffic-ops-kb": {
+      "command": "D:\\google\\kotaemon-main\\kotaemon-main\\.venv\\Scripts\\python.exe",
+      "args": [
+        "D:\\google\\kotaemon-main\\kotaemon-main\\api\\mcp_server.py"
+      ],
+      "env": {
+        "MCP_TRANSPORT": "stdio"
+      }
+    }
+  }
+}

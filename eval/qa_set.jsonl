@@ -1,0 +1,125 @@
+{"id":"q001","question":"列车因设施设备故障迫停区间需组织区间疏散时，行车调度人员应首先采取什么措施？","ground_truth":"行车调度人员应扣停可能驶入受影响区域的列车，组织采取步行疏散或列车接驳疏散。","source_file":"01_行车组织管理办法_区间疏散与限速.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q002","question":"区间步行疏散时，调度人员需要会同哪些调度人员完成哪些配合动作？","ground_truth":"会同电力、环控调度人员组织该区间接触轨停电、启动相应环控模式，通知车站前往迫停地点做好乘客引导，并在邻站端门及疏散区间联络线等通道处安排人员监控。","source_file":"01_行车组织管理办法_区间疏散与限速.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q003","question":"线路恢复后，疏散区间上下行首列车运行速度不应超过多少？","ground_truth":"不应超过 25 km/h，确认无人员及物品遗留后恢复正常运行。","source_file":"01_行车组织管理办法_区间疏散与限速.md","source_page":1,"type":"numeric","difficulty":"easy"}
+{"id":"q004","question":"地震烈度为 6（含）至 7（不含）度时，列车运行速度不应超过多少？","ground_truth":"列车运行速度不应超过 25 km/h。","source_file":"01_行车组织管理办法_区间疏散与限速.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q005","question":"地震烈度为 7 度及以上时，行车调度人员应如何组织列车？","ground_truth":"应组织在站列车清客后退出服务，组织区间列车在确保安全的条件下运行至就近站清客后退出服务，列车运行速度不应超过 25 km/h。","source_file":"01_行车组织管理办法_区间疏散与限速.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q006","question":"列车迫停地下区间超过多长时间时，环控调度人员应启动相应环控模式？","ground_truth":"超过 4 分钟时，环控调度人员应启动相应环控模式。","source_file":"01_行车组织管理办法_区间疏散与限速.md","source_page":1,"type":"numeric","difficulty":"easy"}
+{"id":"q007","question":"预判停电短时间不能恢复时，行车调度人员应如何处置？","ground_truth":"应立即组织区间疏散。","source_file":"01_行车组织管理办法_区间疏散与限速.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q008","question":"突发大客流可能超出车站容纳能力时，行车调度人员可视情采取哪些措施？","ground_truth":"视情采取调整列车停站时间、越站行车或加开列车等措施，及时疏导乘客。","source_file":"01_行车组织管理办法_区间疏散与限速.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q009","question":"设施设备维护规程应报哪个部门备案？","ground_truth":"应报城市轨道交通运营主管部门备案。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q010","question":"设施设备维护规程应至少包括哪些内容？","ground_truth":"至少包括设施设备维护项目、维护周期、维护流程、技术标准、相关专业协同等内容。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q011","question":"地铁车辆维修分为哪几个等级？","ground_truth":"车辆维修分为列检、月检、架修和大修。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q012","question":"设计最高运行速度小于等于 120 km/h 的列车，其列检间隔不超过多少天？","ground_truth":"列检间隔不超过 15 天。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q013","question":"设计最高运行速度小于等于 120 km/h 的列车，其架修间隔要求是什么？","ground_truth":"架修不超过 6 年或 80 万车公里，时间与里程以先到者为准。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q014","question":"设计最高运行速度小于等于 120 km/h 的列车，其大修间隔与整体使用寿命分别是多少？","ground_truth":"大修不超过 12 年或 160 万车公里，整体使用寿命一般不超过 30 年或 480 万车公里。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"table","difficulty":"hard"}
+{"id":"q015","question":"信号系统维修分为哪几个等级？","ground_truth":"分为巡检、月检、年检、中修和大修。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q016","question":"信号系统的大修周期不超过多少年？整体使用寿命一般不超过多少年？","ground_truth":"大修不超过 10 年，整体使用寿命一般不超过 20 年。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q017","question":"通信系统维修分级与周期和信号系统相比有何异同？","ground_truth":"通信系统维修同样分为巡检、月检、年检、中修和大修，间隔要求与信号系统一致（巡检不超过 7 天、月检不超过 3 个月、年检不超过 1 年、中修不超过 5 年、大修不超过 10 年，整体使用寿命一般不超过 20 年）。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q018","question":"运营线路每天非运营时间内的设施设备检修施工预留时间不宜少于多少小时？","ground_truth":"不宜少于 4 小时。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"numeric","difficulty":"easy"}
+{"id":"q019","question":"由外单位进行施工作业时，运营单位应履行哪些安全管理要求？","ground_truth":"应加强安全培训教育、作业交底等安全管理，由运营单位办理相关施工手续后方可施工；在轨行区等重点区域开展的可能影响行车安全的施工作业，运营单位应安排专人旁站监督。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q020","question":"检修记录应保存至什么时候？","ground_truth":"检修记录应保存至土建设施或运营设备的使用寿命终止。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q021","question":"CBTC 的中文全称是什么？其核心是什么？","ground_truth":"CBTC 是基于通信的列车控制系统（Communications-Based Train Control），其核心是移动闭塞（Moving Block）。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q022","question":"CBTC 系统有哪三大技术支柱？","ground_truth":"连续高精度列车定位、连续双向数字通信、分布式安全处理。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q023","question":"CBTC 通信链路中断在多长时间内会触发既定降级行为？","ground_truth":"链路中断在 5 秒内触发既定降级行为。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q024","question":"CBTC 中轨旁 ZC（区域控制器）管辖多长区域？采用什么冗余配置？","ground_truth":"ZC 管辖 2-5 公里区域，每侧采用二取二（2oo2）或三取二（2oo3）冗余配置。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"numeric","difficulty":"hard"}
+{"id":"q025","question":"ATP 的安全等级是什么？其在 CBTC 中的作用是什么？","ground_truth":"ATP 的安全等级是 SIL 4，是所有 GoA 等级必须的安全底线，强制执行移动授权，超速即施加紧急制动。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q026","question":"ATO 的站台对位精度约为多少厘米？","ground_truth":"约 30 厘米。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"numeric","difficulty":"easy"}
+{"id":"q027","question":"ATP、ATO、ATS 三者的层次关系是什么？","ground_truth":"ATP 说不能超过某速度，ATO 说本区段合适速度且不超过 ATP 限制，ATS 说按时刻表离站；层次不可颠倒，若 ATS 指令发车而 ATP 要求制动，ATP 优先。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q028","question":"GoA 4 的全自动无人驾驶有哪些典型示例城市？","ground_truth":"纽伦堡、巴黎、布达佩斯、巴塞罗那、伊斯坦布尔、新加坡、香港。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q029","question":"CBTC 降级运行时，常见的后备方式是什么？","ground_truth":"点式 ATP（基于应答器/信标的定点防护），列车以受限速度运行，仅在有信号显示或人工引导的区段行车。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q030","question":"CBTC 恢复通信后，列车需完成什么才能恢复移动闭塞运行？","ground_truth":"列车重新完成 CBTC 初始化定位并经确认后方可恢复移动闭塞运行。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q031","question":"北京市地方标准中车辆修程宜分为哪几级？","ground_truth":"宜分为列检、月检、定修、架修 A、架修 B、厂修。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q032","question":"定修时转向架是否必须与车体分离？","ground_truth":"定修时转向架可不与车体分离。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q033","question":"架修 A 与架修 B 的作业内容有何区别？","ground_truth":"架修 A 对转向架、受电弓等重要部件进行分解、清洗、检查、探伤、修理等，并对车辆全面检测调试试验以恢复综合性能；架修 B 对车辆各系统或部件进行分解检修，对车辆全面检测调试试验以恢复车辆设计要求。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q034","question":"列检的里程间隔与时间间隔分别是多少？","ground_truth":"列检里程间隔 0.6 万公里，时间间隔 4 天。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q035","question":"月检的里程间隔与时间间隔分别是多少？","ground_truth":"月检里程间隔 3 万公里，时间间隔 30 天。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q036","question":"定修的里程间隔与时间间隔分别是多少？","ground_truth":"定修里程间隔 60 万公里，时间间隔 2 年。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q037","question":"架修 A 的里程间隔与时间间隔分别是多少？","ground_truth":"架修 A 里程间隔 120 万公里，时间间隔 4 年。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q038","question":"架修 B 的里程间隔与时间间隔分别是多少？","ground_truth":"架修 B 里程间隔 240 万公里，时间间隔 8 年。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q039","question":"厂修的里程间隔与时间间隔分别是多少？","ground_truth":"厂修里程间隔 480 万公里，时间间隔 15 年。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q040","question":"车辆检修周期表中，公里周期和时间周期如何确定先后？","ground_truth":"公里周期和时间周期以先到为准，表中走行里程和时间均为上限值。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q041","question":"运营突发事件按严重性和受影响程度分为哪四级？","ground_truth":"分为特别重大、重大、较大、一般四级。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q042","question":"特别重大事件按死亡人数如何界定？","ground_truth":"死亡 30 人以上。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q043","question":"重大事件按直接经济损失如何界定？","ground_truth":"直接经济损失 5000 万以上 1 亿以下。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q044","question":"较大事件按连续中断行车时间如何界定？","ground_truth":"连续中断行车 6 小时以上 24 小时以下。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"numeric","difficulty":"hard"}
+{"id":"q045","question":"一般事件按直接经济损失如何界定？","ground_truth":"直接经济损失 50 万以上 1000 万以下。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q046","question":"运营单位作为第一响应单位，先期应急处置主要包括哪些工作？","ground_truth":"包括派工作人员到现场疏散乘客、调整线路运营阻止列车进入现场、授权一线人员暂停部分区段或线网运营、通过告示牌广播等发布信息、开展现场救援抢修等。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"single_hop","difficulty":"hard"}
+{"id":"q047","question":"应急响应分为哪几个等级？","ground_truth":"分为Ⅰ级、Ⅱ级、Ⅲ级、Ⅳ级四个等级。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q048","question":"Ⅳ级响应的责任主体是谁？","ground_truth":"运营单位是第一响应单位，立即启动本单位专业应急预案开展先期处置。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q049","question":"Ⅲ级响应在什么情况下启动？","ground_truth":"发生Ⅲ级以上事件，或初步判定属于Ⅲ级以上级别时，报请指挥部指挥长批准后启动本预案。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q050","question":"Ⅱ级响应相比Ⅲ级响应增加了哪些措施？","ground_truth":"在Ⅲ级响应基础上，由指挥部指挥长牵头组织现场处置，成立现场指挥部，组织专家咨询。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"multi_hop","difficulty":"medium"}
+{"id":"q051","question":"城市轨道交通牵引供电系统采用什么电压等级？","ground_truth":"直流制，DC 1500V、750V。","source_file":"06_牵引供电系统原理.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q052","question":"牵引供电系统的供电流程第一步从城市电网引入多少伏高压交流电？","ground_truth":"引入 110kV 或 220kV 高压交流电。","source_file":"06_牵引供电系统原理.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q053","question":"整流变压器将交流 35kV 降压为约多少伏？整流器最终整流为直流多少伏？","ground_truth":"整流变压器将交流 35kV 降压为交流约 1180V，整流器整流为直流 1500V。","source_file":"06_牵引供电系统原理.md","source_page":1,"type":"numeric","difficulty":"hard"}
+{"id":"q054","question":"牵引网额定电压波动范围（1500V 制式）是多少？","ground_truth":"直流 1000V-1800V。","source_file":"06_牵引供电系统原理.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q055","question":"接触轨（第三轨）供电与架空接触网供电各有何特点？","ground_truth":"接触轨供电在走行轨旁单独架设带电接触轨，列车通过集电靴取电，第三轨由绝缘防护罩包裹；架空接触网在隧道上方架设，通过受电弓取电，电压在直流 1500V 及以上宜采用架空形式。","source_file":"06_牵引供电系统原理.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q056","question":"一级负荷、二级负荷、三级负荷分别对应哪些典型设备与供电保障？","ground_truth":"一级负荷对应列车牵引、信号系统，双回路独立供电；二级负荷对应自动扶梯等，二路进线电源保障连续供电；三级负荷对应商业广告照明等，可间断供电。","source_file":"06_牵引供电系统原理.md","source_page":1,"type":"table","difficulty":"medium"}
+{"id":"q057","question":"杂散电流腐蚀防护采用什么方案？","ground_truth":"采用堵、排、测三位一体方案。","source_file":"06_牵引供电系统原理.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q058","question":"城市轨道交通采用直流供电相比交流供电有哪些优势？","ground_truth":"传输损耗更低、供电稳定性更强、设备体积更紧凑。","source_file":"06_牵引供电系统原理.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q059","question":"供电系统需对哪些关键部位进行实时监控？","ground_truth":"断路器、继电保护装置、干式变压器、再生储能装置、UPS 电源等。","source_file":"07_设备关键部位实时监控.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q060","question":"信号系统需对哪些关键部位进行实时监控？","ground_truth":"应答器、转辙机、电源系统等。","source_file":"07_设备关键部位实时监控.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q061","question":"机电系统需对哪些关键部位进行实时监控？","ground_truth":"通风空调与供暖、给水与排水、自动售检票系统、火灾自动报警系统、乘客信息系统、站台门等。","source_file":"07_设备关键部位实时监控.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q062","question":"运营单位增设在线监测设备有什么要求？","ground_truth":"应经过充分论证、评审后加装，加装的设备不得影响设施设备正常运行。","source_file":"07_设备关键部位实时监控.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q063","question":"哪些设备系统的时钟需要定期监测和校准？","ground_truth":"供电、通信、信号、综合监控、站台门等存在接口关系的设备系统时钟。","source_file":"07_设备关键部位实时监控.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q064","question":"站台门系统的主要类型有哪些？","ground_truth":"全高封闭式屏蔽门和半高安全门（安全栅栏）。","source_file":"08_站台门屏蔽门系统.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q065","question":"半高安全门的高度约为多少？","ground_truth":"约 1.2-1.5 米。","source_file":"08_站台门屏蔽门系统.md","source_page":1,"type":"numeric","difficulty":"easy"}
+{"id":"q066","question":"站台门系统有哪些主要功能？","ground_truth":"安全防护、环控节能、噪声隔离、客流疏导。","source_file":"08_站台门屏蔽门系统.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q067","question":"站台门状态异常时如何闭锁发车信号？","ground_truth":"站台门状态异常（未关闭、夹人、故障）时，会闭锁发车信号，防止列车在站台门未关闭的情况下启动。","source_file":"08_站台门屏蔽门系统.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q068","question":"CBTC 与传统固定闭塞在区段划分上有什么本质区别？","ground_truth":"固定闭塞将轨道划分为固定区段（由基础设施决定），同一时间每区段仅允许一列车占用；CBTC 移动闭塞的闭塞块是移动的（虚拟），随列车移动。","source_file":"09_CBTC与固定闭塞对比.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q069","question":"CBTC 移动闭塞相比固定闭塞在容量上能提升多少？","ground_truth":"容量显著提升，可达 20%+。","source_file":"09_CBTC与固定闭塞对比.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q070","question":"某线路采用 CBTC 移动闭塞后追踪间隔从多少压缩至多少？","ground_truth":"从固定闭塞的约 150 秒压缩至约 110 秒。","source_file":"09_CBTC与固定闭塞对比.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q071","question":"北京地铁试验的 AI 驱动列车调度实现了约多少运能提升？","ground_truth":"约 20% 的运能提升。","source_file":"09_CBTC与固定闭塞对比.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q072","question":"CBTC 移动闭塞相比固定闭塞，轨旁设备有什么变化？","ground_truth":"信号机可基本取消，设备减少（固定闭塞需大量信号机、轨道电路）。","source_file":"09_CBTC与固定闭塞对比.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q073","question":"列车定位测速融合了哪些车载传感器？","ground_truth":"转速计、加速度计、雷达、应答器/信标。","source_file":"10_列车定位与测速技术.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q074","question":"CBTC 列车典型定位精度和测速精度分别可达多少？","ground_truth":"定位精度可达 1 米以内，测速精度可达 0.1 km/h 级。","source_file":"10_列车定位与测速技术.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q075","question":"列车进入 CBTC 区域时如何自动初始化定位？","ground_truth":"利用轨道标记（track marker）自动确定位置。","source_file":"10_列车定位与测速技术.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q076","question":"定位误差校正需要计及哪些传感器误差？","ground_truth":"对车轮空转（slip）、滑行（slide）、磨损（wear）进行校正。","source_file":"10_列车定位与测速技术.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q077","question":"安全制动模型需要考虑哪些最坏工况？","ground_truth":"假设最大速度误差、最坏反应时间、较低黏着（摩擦）系数等。","source_file":"10_列车定位与测速技术.md","source_page":1,"type":"single_hop","difficulty":"hard"}
+{"id":"q078","question":"城市轨道交通供电系统主要包括哪些子系统？","ground_truth":"外部电源，以及牵引网、变配电、动力与照明、电力监控、杂散电流防护等子系统。","source_file":"11_供电系统运营技术规范.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q079","question":"牵引供电系统通过什么整流机组将中压交流转换为直流？","ground_truth":"24 脉波整流机组。","source_file":"11_供电系统运营技术规范.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q080","question":"动力照明系统将电降压为多少伏供车站设备使用？","ground_truth":"降压为 380V/220V。","source_file":"11_供电系统运营技术规范.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q081","question":"供电系统采用什么机制保障供电连续性？","ground_truth":"双电源互备机制，配备微机保护装置与电力监控实现远程调度。","source_file":"11_供电系统运营技术规范.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q082","question":"柔性直流供电技术有什么作用？","ground_truth":"基于全控型双向变流器和智能协同控制，可优化外电源配置、提升再生制动能量利用率、稳定网压。","source_file":"11_供电系统运营技术规范.md","source_page":1,"type":"single_hop","difficulty":"hard"}
+{"id":"q083","question":"列车再生制动的基本原理是什么？","ground_truth":"列车制动时牵引电机切换为发电机工况，将列车动能转换为电能，可回馈到接触网供同一供电区段内正在加速的其他列车使用。","source_file":"12_列车再生制动与能量回馈.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q084","question":"传统牵引供电系统中再生制动能量无法利用会导致哪些问题？","ground_truth":"再生制动能量浪费严重、网压波动大、功率因数低。","source_file":"12_列车再生制动与能量回馈.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q085","question":"轨旁储能系统采用什么吸收再生能量？","ground_truth":"超级电容（supercapacitor）或电池。","source_file":"12_列车再生制动与能量回馈.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q086","question":"可逆变电所采用什么结构实现能量回馈电网？","ground_truth":"采用有源整流-逆变（active front-end）结构。","source_file":"12_列车再生制动与能量回馈.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q087","question":"北京地铁 10 号线（二期）采用再生制动能量回馈技术的最高节能率是多少？","ground_truth":"最高节能率达 17%。","source_file":"12_列车再生制动与能量回馈.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q088","question":"新一代柔性直流牵引供电系统可使总耗电量减少多少？","ground_truth":"减少 10%~20%。","source_file":"12_列车再生制动与能量回馈.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q089","question":"信号系统维修分为哪五个等级？","ground_truth":"巡检、月检、年检、中修和大修。","source_file":"13_信号系统维修分级与周期.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q090","question":"信号系统巡检间隔不超过多少天？","ground_truth":"不超过 7 天。","source_file":"13_信号系统维修分级与周期.md","source_page":1,"type":"numeric","difficulty":"easy"}
+{"id":"q091","question":"信号系统中修和大修间隔分别不超过多少年？","ground_truth":"中修不超过 5 年，大修不超过 10 年。","source_file":"13_信号系统维修分级与周期.md","source_page":1,"type":"numeric","difficulty":"medium"}
+{"id":"q092","question":"应答器、转辙机、联锁分别是什么？","ground_truth":"应答器是安装于轨道的信标用于向列车传递绝对位置限速等信息；转辙机是用于转换道岔位置的执行机构；联锁是负责进路设置、道岔与信号之间安全联锁关系的系统。","source_file":"13_信号系统维修分级与周期.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q093","question":"通信系统维修分为哪五个等级？","ground_truth":"巡检、月检、年检、中修和大修。","source_file":"14_通信系统维修分级与周期.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q094","question":"通信系统需对哪些关键部位进行实时监控？","ground_truth":"电源、传输设备、网络设备等。","source_file":"14_通信系统维修分级与周期.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q095","question":"通信系统在 CBTC 中承载哪三类报文？","ground_truth":"位置报告（车→地）、移动授权 MA（地→车）、状态汇总（→中央 ATS）。","source_file":"14_通信系统维修分级与周期.md","source_page":1,"type":"single_hop","difficulty":"hard"}
+{"id":"q096","question":"火灾应急处置的基本原则是什么？","ground_truth":"第一时间报警、先救人后灭火、切断相关电源、启动排烟模式、组织疏散。","source_file":"15_火灾应急处置与消防安全.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q097","question":"列车在区间发生火灾时应如何处置？","ground_truth":"尽量将列车驶入前方车站组织乘客疏散；若无法运行至车站需在区间组织疏散时，应执行区间疏散相关规定，包括扣停可能驶入受影响区域的列车、接触轨停电、启动环控模式、安排人员引导等。","source_file":"15_火灾应急处置与消防安全.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q098","question":"火灾自动报警系统与哪个系统联动？","ground_truth":"与综合监控系统（ISCS）联动，火灾信号可触发相关风机、排烟阀、站台门等设备的联动控制。","source_file":"15_火灾应急处置与消防安全.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q099","question":"运营突发事件应急预案体系一般包括哪几个层面？","ground_truth":"政府层面运营突发事件应急预案、部门应急预案、运营单位突发事件应急预案。","source_file":"16_应急预案体系与演练.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q100","question":"应急预案演练应覆盖哪些场景？","ground_truth":"列车撞击、脱轨、设施设备故障、隧道内塌方、涌水、大客流等各类场景。","source_file":"16_应急预案体系与演练.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q101","question":"轨道设施养护维修分为哪几个等级？","ground_truth":"巡检、月检、年检和大修四个等级。","source_file":"17_轨道设施养护维修.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q102","question":"轨道设施大修的间隔如何确定？","ground_truth":"依据状态确定。","source_file":"17_轨道设施养护维修.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q103","question":"AFC 系统通常包括哪些组成？","ground_truth":"自动售票机（TVM）、自动检票机（闸机 AGM）、半自动售补票机（BOM）、车站计算机系统（SC）与线路中央计算机系统（LCC）、清分清算系统（ACC）。","source_file":"18_自动售检票系统AFC.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q104","question":"AFC 系统有哪些主要功能？","ground_truth":"售票、检票、客流统计、清分清算。","source_file":"18_自动售检票系统AFC.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q105","question":"AFC 系统的技术趋势是什么？","ground_truth":"向无感支付、刷脸过闸、智慧出行方向发展，并与乘客信息系统（PIS）、大数据分析结合。","source_file":"18_自动售检票系统AFC.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q106","question":"城市轨道交通系统由哪些专业子系统构成？","ground_truth":"车辆系统、信号系统（CBTC）、通信系统、供电系统、轨道系统、机电系统、综合监控系统（ISCS）。","source_file":"19_系统总体概览.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q107","question":"运行维护总体要求中，运营单位应履行哪些职责？","ground_truth":"组织编制设施设备维护规程并报备、编制维护计划并组织实施、制定落实施工检修制度、对关键部位实时监控、定期校准设备系统时钟、保障每天非运营时间检修施工预留时间不少于 4 小时。","source_file":"19_系统总体概览.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q108","question":"综合监控系统（ISCS）的主要功能是什么？","ground_truth":"集成监控各子系统。","source_file":"19_系统总体概览.md","source_page":1,"type":"single_hop","difficulty":"easy"}
+{"id":"q109","question":"供电系统采用什么制式向列车供电？","ground_truth":"直流 1500V/750V 制式，由牵引变电所经整流机组将交流电整流为直流电，通过接触网或第三轨向列车供电。","source_file":"19_系统总体概览.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q110","question":"运营单位在应急管理方面的总体要求是什么？","ground_truth":"运营单位是运营突发事件处置工作的责任主体，应建立健全应急指挥和协调联动机制，完善应急预案体系，做好客流疏散组织，建立信息共享和应急联动机制。","source_file":"19_系统总体概览.md","source_page":1,"type":"single_hop","difficulty":"medium"}
+{"id":"q111","question":"CBTC 无线通信中断降级为点式 ATP 后，列车运行限速是多少？这一限速要求与哪份行车规章中的疏散限速一致？","ground_truth":"降级后列车以不高于规定限速（如 25 km/h）运行；这一 25 km/h 限速与《行车组织管理办法》中区间疏散及线路恢复后首列车 25 km/h 限速一致。","source_file":"03_CBTC信号系统原理.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q112","question":"信号系统的维修分级（五级）与轨道设施的维修分级（四级）有什么不同？","ground_truth":"信号系统维修分为巡检、月检、年检、中修、大修五级；轨道设施养护维修分为巡检、月检、年检、大修四级，比信号系统少了中修这一级。","source_file":"13_信号系统维修分级与周期.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q113","question":"信号系统的大修周期（10 年）比车辆的大修周期（12 年）短还是长？两者整体使用寿命分别是多少？","ground_truth":"信号系统大修不超过 10 年，车辆大修不超过 12 年，因此信号系统大修周期更短；信号系统整体使用寿命一般不超过 20 年，车辆整体使用寿命一般不超过 30 年或 480 万车公里。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q114","question":"列车迫停区间需要疏散时，涉及哪些专业系统的协同动作？","ground_truth":"需扣停列车、组织步行或列车接驳疏散，并会同电力调度组织接触轨停电、环控调度启动环控模式、通知车站引导乘客、安排人员在端门及联络线监控。","source_file":"01_行车组织管理办法_区间疏散与限速.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q115","question":"再生储能装置为什么同时出现在供电系统实时监控要求和再生制动节能方案中？","ground_truth":"因为再生储能装置既是吸收再生制动能量的节能设备（轨旁储能系统采用超级电容或电池），又是《设施设备运行维护管理办法》第九条要求实时监控的供电系统关键部位之一。","source_file":"12_列车再生制动与能量回馈.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q116","question":"站台门系统为什么需要同时关注实时监控、时钟校准和发车信号闭锁三个方面？","ground_truth":"站台门是第九条要求实时监控的关键机电设备；它与信号、车辆、综合监控存在接口关系故需时钟校准；站台门未关闭/夹人/故障时闭锁发车信号防止列车在门未关闭时启动。","source_file":"08_站台门屏蔽门系统.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q117","question":"通信系统既是独立的维修对象，又在 CBTC 中承担什么角色？","ground_truth":"通信系统维修分为巡检、月检、年检、中修、大修五级（与信号一致）；同时它是 CBTC 移动闭塞的核心支撑，提供车地连续双向数字通信，承载位置报告、移动授权 MA、状态汇总三类报文。","source_file":"14_通信系统维修分级与周期.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q118","question":"火灾发生时，环控系统和信号系统分别发挥什么作用？","ground_truth":"环控调度启动相应排烟模式防止烟雾蔓延；信号系统方面（区间火灾需疏散时）要扣停可能驶入受影响区域的列车。","source_file":"15_火灾应急处置与消防安全.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q119","question":"从外部电源引入到列车取电，牵引供电经历了哪几级电压变换？","ground_truth":"城市电网 110kV/220kV 高压→主变电所降压为中压 35kV/20kV/10kV→整流变压器降压为交流约 1180V→整流器整流为直流 1500V→经接触网或第三轨供列车取电。","source_file":"06_牵引供电系统原理.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q120","question":"固定闭塞与 CBTC 移动闭塞在列车定位方式上有何本质区别？","ground_truth":"固定闭塞采用区段占用检测（轨道电路/计轴）判断列车是否占用区段；CBTC 采用连续高精度定位（1 米级），列车持续报告自身位置。","source_file":"09_CBTC与固定闭塞对比.md","source_page":1,"type":"multi_hop","difficulty":"medium"}
+{"id":"q121","question":"车辆检修的日常检修（列检、月检）与定期检修（定修、架修、厂修）在周期上限上如何递进？","ground_truth":"列检 0.6 万公里/4 天、月检 3 万公里/30 天为日常检修；定修 60 万公里/2 年、架修 A 120 万公里/4 年、架修 B 240 万公里/8 年、厂修 480 万公里/15 年为定期检修，逐级递增。","source_file":"04_车辆检修修程与周期.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q122","question":"《设施设备运行维护管理办法》第十二条、第十三条、第十四条、第十五条分别规定了什么？","ground_truth":"第十二条规定维护规程编制与备案；第十三条规定设施设备维护要求（车辆/信号/通信/轨道等分级与周期）；第十四条规定维护计划执行与检修施工预留时间；第十五条规定施工检修制度与安全管理。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q123","question":"运营突发事件的分级（特别重大/重大/较大/一般）与应急响应分级（Ⅰ/Ⅱ/Ⅲ/Ⅳ级）之间是什么关系？","ground_truth":"事件分级按死亡/重伤人数、直接经济损失、中断行车时间划分四级；应急响应分为Ⅰ/Ⅱ/Ⅲ/Ⅳ级，响应级别不得低于上级指挥部应急响应级别，Ⅳ级为最低响应由运营单位先期处置，Ⅰ级为最高全面动员。","source_file":"05_运营突发事件应急预案.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q124","question":"CBTC 的定位测速传感器中，哪种能校正空转/滑行误差？为什么？","ground_truth":"雷达（多普勒雷达）测速不依赖轮轨接触，可校正空转/滑行误差；应答器/信标提供绝对位置校准点。","source_file":"10_列车定位与测速技术.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
+{"id":"q125","question":"轨行区施工安全管理在维护规程、施工检修制度、轨道养护中分别有哪些要求？","ground_truth":"轨行区等重点区域施工作业应有专业人员监督；外单位在轨行区开展可能影响行车安全的施工作业应安排专人旁站监督；轨行区施工需严格落实施工区域管理、请销点登记等要求。","source_file":"02_设施设备运行维护管理办法_检修周期.md","source_page":1,"type":"multi_hop","difficulty":"hard"}
