@@ -14,7 +14,6 @@ traffic_ops_kb（collection = index_4）。
 
 from __future__ import annotations
 
-import os
 from pathlib import Path
 from typing import List, Optional
 
@@ -199,42 +198,26 @@ def ingest(req: IngestRequest):
 
 @app.post("/agent")
 def agent_chat(req: AgentRequest):
-    """ReAct Agent 问答：把 RAG 包成可多步检索 + 多轮记忆的 Agent。
+    """ReAct Agent 问答：LangGraph StateGraph 驱动的多步检索 + 多轮记忆。"""
+    from .langgraph_agent import LangGraphAgent
 
-    USE_LANGGRAPH=1 时切换为 LangGraph 版（api/langgraph_agent.py），
-    默认走原 TrafficAgent（api/agent.py），二者接口同构，可 A/B 对比。
-    """
-    if os.getenv("USE_LANGGRAPH") == "1":
-        from .langgraph_agent import LangGraphAgent
-
-        agent = LangGraphAgent()
-        res = agent.chat(req.question, session_id=req.session_id)
-        return {
-            "answer": res["answer"],
-            "latency_ms": res["latency_ms"],
-            "session_id": req.session_id,
-            "engine": "langgraph",
-        }
-
-    from .agent import TrafficAgent
-
-    agent = TrafficAgent(top_k=req.top_k)
+    agent = LangGraphAgent(top_k=req.top_k)
     res = agent.chat(req.question, session_id=req.session_id)
     return {
         "answer": res["answer"],
         "latency_ms": res["latency_ms"],
         "session_id": req.session_id,
         "trace": res["trace"],
-        "engine": "react",
+        "engine": "langgraph",
     }
 
 
 @app.post("/agent/stream")
 def agent_chat_stream(req: AgentRequest):
-    """ReAct Agent 流式问答：逐步推送 Thought/Action/Observation/Final Answer。"""
-    from .agent import TrafficAgent
+    """ReAct Agent 流式问答：LangGraph 驱动，逐 token SSE 推送推理过程。"""
+    from .langgraph_agent import LangGraphAgent
 
-    agent = TrafficAgent(top_k=req.top_k)
+    agent = LangGraphAgent(top_k=req.top_k)
     return StreamingResponse(
         agent.stream_chat(req.question, session_id=req.session_id),
         media_type="text/event-stream",

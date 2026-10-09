@@ -1041,6 +1041,7 @@
       return;
     }
 
+    var receivedDone = false;
     fetch("/agent/stream", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -1048,9 +1049,15 @@
     })
       .then(function (r) {
         if (!r.ok) {
-          return r.json().then(function (d) {
-            throw new Error(d.detail ? String(d.detail) : "HTTP " + r.status);
-          }).catch(function () { throw new Error("HTTP " + r.status); });
+          return r.text().then(function (d) {
+            try {
+              var j = JSON.parse(d);
+              throw new Error(j.detail ? String(j.detail) : "HTTP " + r.status);
+            } catch (pe) {
+              if (pe.message && pe.message.indexOf("HTTP") === 0) throw pe;
+              throw new Error("HTTP " + r.status);
+            }
+          });
         }
         var reader = r.body.getReader();
         var decoder = new TextDecoder();
@@ -1065,7 +1072,12 @@
               var line = parts[i].trim();
               if (line.indexOf("data:") !== 0) continue;
               var payload = line.slice(5).trim();
-              try { handleEvent(JSON.parse(payload)); } catch (e) {}
+              if (!payload) continue;
+              try {
+                var evt = JSON.parse(payload);
+                if (evt.type === "done") receivedDone = true;
+                handleEvent(evt);
+              } catch (e) { console.warn("parse event failed:", e, payload); }
             }
             return pump();
           });
@@ -1080,6 +1092,13 @@
         updateThisAgentMessage(err, false);
       })
       .finally(function () {
+        if (!receivedDone && answerBuffer) {
+          updateThisAgentMessage(answerBuffer, false);
+        }
+        if (!receivedDone && !answerBuffer) {
+          var targetBox = currentBox();
+          if (targetBox) setStatus(targetBox, "连接中断，请重试");
+        }
         resetInput();
       });
   }
